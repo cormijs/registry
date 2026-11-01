@@ -1,0 +1,17 @@
+{
+  "name": "@cormijs/registry",
+  "description": "The index of the Cormi plugins on npm, synced daily: their manifests, checks and downloads",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node src/sync.mjs",
+    "sync:verify": "node src/sync.mjs --verify"
+  },
+  "dependencies": {
+    "@cormijs/core": "next"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "license": "MIT"
+}
