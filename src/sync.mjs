@@ -18,7 +18,7 @@ const verify = process.argv.includes('--verify')
 
 /** The stack the sandbox checks plugins with: every bundler and UI framework, with their integrations. */
 const STACK = {
-  'cormi': 'next',
+  '@cormijs/cormi': 'next',
   '@cormijs/preset': 'next',
   '@cormijs/vite': 'next',
   '@cormijs/rsbuild': 'next',
@@ -57,7 +57,7 @@ async function search() {
   }
 }
 
-const isOfficial = name => name === 'cormi' || name.startsWith('@cormijs/')
+const isOfficial = name => name.startsWith('@cormijs/')
 
 /** Packages that provide part of the stack (bundlers, UI frameworks, presets) are not checked as plugins. */
 const isStack = manifest => manifest.service?.implements?.some(name => ['bundler', 'renderer', 'app'].includes(name))
@@ -72,7 +72,7 @@ function check(objects) {
     if (install.status) throw new Error('cannot install the sandbox')
     const reports = {}
     for (const object of objects) {
-      const result = spawnSync(process.execPath, [join(dir, 'node_modules/cormi/bin/cormi.js'), 'plugin', 'check', '--json'], {
+      const result = spawnSync(process.execPath, [join(dir, 'node_modules/@cormijs/cormi/bin/cormi.js'), 'plugin', 'check', '--json'], {
         cwd: join(dir, 'node_modules', object.name),
         encoding: 'utf8',
         timeout: 120_000,
