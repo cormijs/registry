@@ -4,7 +4,9 @@
 //
 // Every package with the `cormi-plugin` keyword, at its latest version: its
 // manifest (the `cormi` field of package.json, see @cormijs/core), whether
-// it is official, its downloads of the last month. With --verify, each
+// it is official, its downloads of the last month. Besides them, packages of
+// the cordis ecosystem that work in Cormi apps without saying so (EXTERNAL),
+// with the manifest this index gives them. With --verify, each
 // plugin is checked with `cormi plugin check` in a sandbox where every
 // bundler and UI framework is installed.
 import { spawnSync } from 'node:child_process'
@@ -44,6 +46,18 @@ async function search() {
 }
 
 const isOfficial = name => name.startsWith('@cormijs/')
+
+/** The drivers of minato: plugins of cormi.yml next to @cormijs/database, which provides the `model` they wait for. */
+const DRIVER = { category: 'database', service: { required: ['model'], implements: ['database'] } }
+
+/** Packages of the cordis ecosystem that are Cormi plugins, by name: the manifests they do not declare. */
+const EXTERNAL = {
+  '@minatojs/driver-sqlite': DRIVER,
+  '@minatojs/driver-postgres': DRIVER,
+  '@minatojs/driver-mysql': DRIVER,
+  '@minatojs/driver-mongo': DRIVER,
+  '@minatojs/driver-memory': DRIVER,
+}
 
 /** Packages that provide part of the stack (bundlers, UI frameworks, presets) are not checked as plugins. */
 const isStack = manifest => manifest.service?.implements?.some(name => ['bundler', 'renderer', 'app'].includes(name))
@@ -124,9 +138,32 @@ for (const result of results) {
   })
 }
 
+for (const [name, manifest] of Object.entries(EXTERNAL)) {
+  if (objects.some(object => object.name === name)) continue
+  const packument = await getJSON(`${REGISTRY}/${name.replace('/', '%2f')}`)
+  const version = packument?.['dist-tags']?.latest
+  const meta = packument?.versions?.[version]
+  if (!meta || meta.deprecated) continue
+  const downloads = await getJSON(`https://api.npmjs.org/downloads/point/last-month/${name}`).catch(() => undefined)
+  objects.push({
+    name,
+    version,
+    description: meta.description,
+    keywords: meta.keywords ?? [],
+    date: packument.time?.[version],
+    links: { npm: `https://www.npmjs.com/package/${name}`, ...meta.homepage && { homepage: meta.homepage } },
+    // compatible with every bundler and UI framework: they run on the server
+    manifest: { ...conclude(meta), ...manifest, source: 'declared' },
+    official: false,
+    external: true,
+    downloads: downloads ? { lastMonth: downloads.downloads } : undefined,
+  })
+}
+
 if (verify) {
   const time = new Date().toISOString()
-  const plugins = objects.filter(object => !isStack(object.manifest))
+  // the manifests of external packages are this index's, not theirs to check against
+  const plugins = objects.filter(object => !object.external && !isStack(object.manifest))
   const reports = await check(plugins)
   for (const object of plugins) {
     const report = reports[object.name]
