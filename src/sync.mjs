@@ -16,22 +16,8 @@ import { conclude } from '@cormijs/core'
 const REGISTRY = (process.env.NPM_REGISTRY ?? 'https://registry.npmjs.org').replace(/\/$/, '')
 const verify = process.argv.includes('--verify')
 
-/** The stack the sandbox checks plugins with: every bundler and UI framework, with their integrations. */
-const STACK = {
-  '@cormijs/cormi': 'next',
-  '@cormijs/preset': 'next',
-  '@cormijs/vite': 'next',
-  '@cormijs/rsbuild': 'next',
-  '@cormijs/react': 'next',
-  '@cormijs/vue': 'next',
-  '@vitejs/plugin-react': 'latest',
-  '@rsbuild/plugin-react': 'latest',
-  '@vitejs/plugin-vue': 'latest',
-  '@rsbuild/plugin-vue': 'latest',
-  'react': 'latest',
-  'react-dom': 'latest',
-  'vue': 'latest',
-}
+/** The stack the sandbox checks plugins with: every bundler and UI framework, with the integrations they declare as peers. */
+const STACK = ['@cormijs/cormi', '@cormijs/preset', '@cormijs/vite', '@cormijs/rsbuild', '@cormijs/react', '@cormijs/vue']
 
 async function getJSON(url) {
   for (let attempt = 1; ; attempt++) {
@@ -62,11 +48,34 @@ const isOfficial = name => name.startsWith('@cormijs/')
 /** Packages that provide part of the stack (bundlers, UI frameworks, presets) are not checked as plugins. */
 const isStack = manifest => manifest.service?.implements?.some(name => ['bundler', 'renderer', 'app'].includes(name))
 
-/** Check the plugins in a sandbox that has every bundler and UI framework; their reports by name. */
-function check(objects) {
+/**
+ * The dependencies of the sandbox: the stack at `next`, the plugins, and the
+ * peers of both at the ranges they declare, e.g. the integrations of each
+ * bundler (`@vitejs/plugin-react`, `@tailwindcss/vite`).
+ */
+async function sandboxDependencies(objects) {
+  const dependencies = {}
+  const addPeers = (peers = {}) => {
+    for (const [name, range] of Object.entries(peers)) {
+      if (!name.startsWith('@cormijs/') && !(name in dependencies)) dependencies[name] = range
+    }
+  }
+  for (const name of STACK) {
+    dependencies[name] = 'next'
+    addPeers((await getJSON(`${REGISTRY}/${name.replace('/', '%2f')}/next`))?.peerDependencies)
+  }
+  for (const object of objects) {
+    dependencies[object.name] = object.version
+    addPeers(peers.get(object.name))
+  }
+  return dependencies
+}
+
+/** Check the plugins in a sandbox that has every bundler and UI framework; their reports by name, or why they could not be checked. */
+async function check(objects) {
   const dir = mkdtempSync(join(tmpdir(), 'cormi-registry-'))
   try {
-    const dependencies = { ...STACK, ...Object.fromEntries(objects.map(object => [object.name, object.version])) }
+    const dependencies = await sandboxDependencies(objects)
     writeFileSync(join(dir, 'package.json'), JSON.stringify({ name: 'sandbox', private: true, type: 'module', dependencies }, null, 2))
     const install = spawnSync('npm', ['install', '--legacy-peer-deps', '--no-audit', '--no-fund'], { cwd: dir, stdio: 'inherit' })
     if (install.status) throw new Error('cannot install the sandbox')
@@ -80,7 +89,9 @@ function check(objects) {
       try {
         reports[object.name] = JSON.parse(result.stdout.trim().split('\n').at(-1))
       } catch {
-        console.warn(`cannot check ${object.name}: ${(result.stderr || result.stdout).trim().split('\n').at(-1)}`)
+        const reason = result.error?.message ?? (result.stderr || result.stdout || '').trim().split('\n').filter(Boolean).at(-1) ?? 'no output'
+        reports[object.name] = { error: reason }
+        console.warn(`cannot check ${object.name}: ${reason}`)
       }
     }
     return reports
@@ -89,12 +100,16 @@ function check(objects) {
   }
 }
 
+/** the peer dependencies of the packages, for the sandbox */
+const peers = new Map()
+
 const results = await search()
 console.log(`${results.length} packages with the cormi-plugin keyword`)
 const objects = []
 for (const result of results) {
   const meta = await getJSON(`${REGISTRY}/${result.name.replace('/', '%2f')}/${result.version}`)
   if (!meta || meta.deprecated) continue
+  peers.set(result.name, meta.peerDependencies)
   const downloads = await getJSON(`https://api.npmjs.org/downloads/point/last-month/${result.name}`).catch(() => undefined)
   objects.push({
     name: result.name,
@@ -112,10 +127,14 @@ for (const result of results) {
 if (verify) {
   const time = new Date().toISOString()
   const plugins = objects.filter(object => !isStack(object.manifest))
-  const reports = check(plugins)
+  const reports = await check(plugins)
   for (const object of plugins) {
     const report = reports[object.name]
-    if (!report?.inferred) continue
+    if (!report?.inferred) {
+      // why it could not be checked: the error of the check, or the export that loads nowhere
+      object.checkError = report?.error ?? report?.exports?.find(item => item.error)?.error ?? 'not checked'
+      continue
+    }
     const exports = Object.keys(report.inferred.exports).length ? { exports: report.inferred.exports } : {}
     object.verified = { time, compat: { ...report.inferred.compat, ...exports }, matches: !report.mismatches.length }
   }
