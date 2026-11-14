@@ -1,0 +1,1739 @@
+{
+  "version": 1,
+  "time": "2026-11-14T04:52:08.971Z",
+  "objects": [
+    {
+      "name": "@cormijs/react",
+      "version": "0.1.0-rc.3",
+      "description": "React for Cormi apps: the renderer of the route table, and the browser API (@cormijs/react/client) with react-router and server rendering",
+      "keywords": [
+        "cormi",
+        "cordis",
+        "react",
+        "renderer",
+        "cormi-plugin",
+        "bundler:*",
+        "renderer:react",
+        "impl:renderer",
+        "impl:react"
+      ],
+      "date": "2026-11-04T13:44:26.060Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/react",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/react#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "React for Cormi apps: the renderer of the route table, and the browser API (@cormijs/react/client) with react-router and server rendering",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ],
+        "service": {
+          "implements": [
+            "renderer",
+            "react"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1595
+      }
+    },
+    {
+      "name": "@cormijs/preset",
+      "version": "0.1.0-rc.3",
+      "description": "A Cormi app without its bundler and UI framework: the router, html, pages, API routes, the HTTP server and the console",
+      "keywords": [
+        "cormi",
+        "cordis",
+        "preset",
+        "cormi-plugin",
+        "bundler:*",
+        "renderer:*",
+        "impl:router",
+        "impl:html",
+        "impl:app",
+        "impl:server"
+      ],
+      "date": "2026-11-04T13:45:07.081Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/preset",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/preset#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "A Cormi app without its bundler and UI framework: the router, html, pages, API routes, the HTTP server and the console",
+        "source": "declared",
+        "service": {
+          "implements": [
+            "router",
+            "html",
+            "app",
+            "server"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1120
+      }
+    },
+    {
+      "name": "@cormijs/vite",
+      "version": "0.1.0-rc.3",
+      "description": "The Vite service of Cormi: dev server on ctx.server, client and server bundles",
+      "keywords": [
+        "cormi",
+        "cordis",
+        "vite",
+        "plugin",
+        "cormi-plugin",
+        "bundler:vite",
+        "renderer:*",
+        "impl:bundler",
+        "impl:vite"
+      ],
+      "date": "2026-11-04T13:46:02.166Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/vite",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/vite#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The Vite service of Cormi: dev server on ctx.server, client and server bundles",
+        "source": "declared",
+        "bundler": [
+          "vite"
+        ],
+        "service": {
+          "implements": [
+            "bundler",
+            "vite"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1117
+      }
+    },
+    {
+      "name": "@cormijs/rsbuild",
+      "version": "0.1.0-rc.3",
+      "description": "The Rsbuild service of Cormi: dev server on ctx.server, client and server bundles",
+      "keywords": [
+        "cormi",
+        "cordis",
+        "rsbuild",
+        "rspack",
+        "plugin",
+        "cormi-plugin",
+        "bundler:rsbuild",
+        "renderer:*",
+        "impl:bundler",
+        "impl:rsbuild"
+      ],
+      "date": "2026-11-04T13:46:11.200Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/rsbuild",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/rsbuild#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The Rsbuild service of Cormi: dev server on ctx.server, client and server bundles",
+        "source": "declared",
+        "bundler": [
+          "rsbuild"
+        ],
+        "service": {
+          "implements": [
+            "bundler",
+            "rsbuild"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1075
+      }
+    },
+    {
+      "name": "@cormijs/vue",
+      "version": "0.1.0-rc.3",
+      "description": "Vue for Cormi apps: the renderer of the route table, and the browser API (@cormijs/vue/client) with Vue Router and server rendering",
+      "keywords": [
+        "cormi",
+        "cordis",
+        "vue",
+        "renderer",
+        "cormi-plugin",
+        "bundler:*",
+        "renderer:vue",
+        "impl:renderer",
+        "impl:vue"
+      ],
+      "date": "2026-11-04T13:50:26.011Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/vue",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/vue#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Vue for Cormi apps: the renderer of the route table, and the browser API (@cormijs/vue/client) with Vue Router and server rendering",
+        "source": "declared",
+        "renderer": [
+          "vue"
+        ],
+        "service": {
+          "implements": [
+            "renderer",
+            "vue"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1047
+      }
+    },
+    {
+      "name": "@cormijs/plugin-tailwindcss",
+      "version": "0.1.0-rc.3",
+      "description": "Tailwind CSS v4 for Cormi apps",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "tailwindcss",
+        "bundler:vite",
+        "bundler:rsbuild",
+        "renderer:*"
+      ],
+      "date": "2026-11-04T13:47:08.949Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-tailwindcss",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-tailwindcss#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Tailwind CSS v4 for Cormi apps",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "bundler": [
+          "vite",
+          "rsbuild"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1023
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "bundler": [
+            "vite",
+            "rsbuild"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-model",
+      "version": "0.1.0-rc.3",
+      "description": "Global data models for Cormi apps: React hooks shared through useModel()",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "model",
+        "state",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:46:57.918Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-model",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-model#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Global data models for Cormi apps: React hooks shared through useModel()",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1022
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-react-query",
+      "version": "0.1.0-rc.3",
+      "description": "TanStack Query for Cormi apps",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "react-query",
+        "tanstack",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:48:45.005Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-react-query",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-react-query#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "TanStack Query for Cormi apps",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1012
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-mpa",
+      "version": "0.1.0-rc.3",
+      "description": "Multi-page Cormi apps: every src/pages/<name>/index.tsx is a page of its own",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "mpa",
+        "multi-page",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:46:41.206Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-mpa",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-mpa#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Multi-page Cormi apps: every src/pages/<name>/index.tsx is a page of its own",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1011
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-mf",
+      "version": "0.1.0-rc.3",
+      "description": "Module federation for Cormi apps, with @module-federation/vite",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "module-federation",
+        "micro-frontends",
+        "bundler:vite",
+        "bundler:rsbuild",
+        "renderer:*"
+      ],
+      "date": "2026-11-04T13:46:27.294Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-mf",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-mf#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Module federation for Cormi apps, with @module-federation/vite",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "bundler": [
+          "vite",
+          "rsbuild"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1008
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "bundler": [
+            "vite",
+            "rsbuild"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-styled-components",
+      "version": "0.1.0-rc.3",
+      "description": "styled-components for Cormi apps: theme and server-rendered styles",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "styled-components",
+        "css-in-js",
+        "bundler:vite",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:49:58.434Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-styled-components",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-styled-components#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "styled-components for Cormi apps: theme and server-rendered styles",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "bundler": [
+          "vite"
+        ],
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1006
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "bundler": [
+            "vite"
+          ],
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-unocss",
+      "version": "0.1.0-rc.3",
+      "description": "UnoCSS for Cormi apps",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "unocss",
+        "atomic-css",
+        "bundler:vite",
+        "renderer:*"
+      ],
+      "date": "2026-11-04T13:47:12.236Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-unocss",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-unocss#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "UnoCSS for Cormi apps",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "bundler": [
+          "vite"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1006
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "bundler": [
+            "vite"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-export-static",
+      "version": "0.1.0-rc.3",
+      "description": "Pre-render the pages of Cormi apps into HTML files for static hosts",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "ssg",
+        "export-static",
+        "bundler:*",
+        "renderer:*"
+      ],
+      "date": "2026-11-04T13:46:55.049Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-export-static",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-export-static#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Pre-render the pages of Cormi apps into HTML files for static hosts",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared"
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1004
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-request",
+      "version": "0.1.0-rc.3",
+      "description": "HTTP requests for Cormi apps: fetch-based request() and useRequest(), intercepted through events",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "request",
+        "fetch",
+        "useRequest",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:47:47.541Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-request",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-request#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "HTTP requests for Cormi apps: fetch-based request() and useRequest(), intercepted through events",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 1000
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-initial-state",
+      "version": "0.1.0-rc.3",
+      "description": "The initial state of Cormi apps, provided by runtime plugins through an event",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "initial-state",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:47:06.346Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-initial-state",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-initial-state#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The initial state of Cormi apps, provided by runtime plugins through an event",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 990
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-federation",
+      "version": "0.1.0-rc.3",
+      "description": "Federated apps for Cormi: packages built and deployed apart, linked by URL into one app with shared singletons",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "module-federation",
+        "micro-frontends",
+        "bundler:vite",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:47:31.853Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-federation",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-federation#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Federated apps for Cormi: packages built and deployed apart, linked by URL into one app with shared singletons",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "bundler": [
+          "vite"
+        ],
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 988
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "bundler": [
+            "vite"
+          ],
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-layout",
+      "version": "0.1.0-rc.3",
+      "description": "A layout with a menu built from the routes, for Cormi apps, with Ant Design",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "layout",
+        "antd",
+        "menu",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:47:39.982Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-layout",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-layout#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "A layout with a menu built from the routes, for Cormi apps, with Ant Design",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 986
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-legacy",
+      "version": "0.1.0-rc.3",
+      "description": "Legacy browsers for Cormi apps, with @vitejs/plugin-legacy",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "legacy",
+        "polyfill",
+        "bundler:vite",
+        "renderer:*"
+      ],
+      "date": "2026-11-04T13:46:25.056Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-legacy",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-legacy#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Legacy browsers for Cormi apps, with @vitejs/plugin-legacy",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "bundler": [
+          "vite"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 984
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "bundler": [
+            "vite"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-qiankun",
+      "version": "0.1.0-rc.3",
+      "description": "qiankun micro frontends for Cormi apps: the master (MicroApp) and Vite-built micro apps",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "qiankun",
+        "micro-frontends",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:46:45.317Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-qiankun",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-qiankun#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "qiankun micro frontends for Cormi apps: the master (MicroApp) and Vite-built micro apps",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ],
+        "exports": {
+          "./slave": {
+            "bundler": [
+              "vite"
+            ]
+          }
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 984
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ],
+          "exports": {
+            "./slave": {
+              "bundler": [
+                "vite"
+              ]
+            }
+          }
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-dva",
+      "version": "0.1.0-rc.3",
+      "description": "dva for Cormi apps: redux and redux-saga with models of src/models",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "dva",
+        "redux",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:45:59.211Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-dva",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-dva#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "dva for Cormi apps: redux and redux-saga with models of src/models",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 983
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-antd",
+      "version": "0.1.0-rc.3",
+      "description": "Ant Design for Cormi apps: theme, locale, and server-rendered styles",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "antd",
+        "ant-design",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:45:40.592Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-antd",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-antd#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Ant Design for Cormi apps: theme, locale, and server-rendered styles",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 981
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-analytics",
+      "version": "0.1.0-rc.3",
+      "description": "Google Analytics 4 and Baidu Tongji for Cormi apps, including client navigations",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "analytics",
+        "google-analytics",
+        "baidu",
+        "bundler:*",
+        "renderer:*"
+      ],
+      "date": "2026-11-04T13:48:27.913Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-analytics",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-analytics#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Google Analytics 4 and Baidu Tongji for Cormi apps, including client navigations",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared"
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 964
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-valtio",
+      "version": "0.1.0-rc.3",
+      "description": "valtio for Cormi apps, with stores connected to Redux DevTools",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "valtio",
+        "state",
+        "bundler:*",
+        "renderer:react"
+      ],
+      "date": "2026-11-04T13:46:56.526Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-valtio",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-valtio#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "valtio for Cormi apps, with stores connected to Redux DevTools",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "renderer": [
+          "react"
+        ]
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 950
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {
+          "renderer": [
+            "react"
+          ]
+        },
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-mock",
+      "version": "0.1.0-rc.3",
+      "description": "Mocked API routes for Cormi apps in dev mode",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "mock",
+        "bundler:*",
+        "renderer:*"
+      ],
+      "date": "2026-11-04T13:46:55.530Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-mock",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-mock#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Mocked API routes for Cormi apps in dev mode",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared"
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 919
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-lint",
+      "version": "0.1.0-rc.3",
+      "description": "cormi lint: ESLint with a default config for TypeScript and React hooks",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "eslint",
+        "lint",
+        "bundler:*",
+        "renderer:*"
+      ],
+      "date": "2026-11-04T13:46:10.396Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-lint",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-lint#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "cormi lint: ESLint with a default config for TypeScript and React hooks",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared"
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 906
+      },
+      "checkError": "error: @cormijs/plugin-lint exports no plugin that loads in Node"
+    },
+    {
+      "name": "@cormijs/preset-react",
+      "version": "0.1.0-rc.3",
+      "description": "A React app bundled by Vite: @cormijs/preset, @cormijs/vite and @cormijs/react with one flat config",
+      "keywords": [
+        "cormi",
+        "cordis",
+        "preset",
+        "react",
+        "cormi-plugin",
+        "bundler:vite",
+        "renderer:react",
+        "impl:router",
+        "impl:html",
+        "impl:app",
+        "impl:server",
+        "impl:bundler",
+        "impl:vite",
+        "impl:renderer",
+        "impl:react"
+      ],
+      "date": "2026-11-04T13:47:06.980Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/preset-react",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/preset-react#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "A React app bundled by Vite: @cormijs/preset, @cormijs/vite and @cormijs/react with one flat config",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "bundler": [
+          "vite"
+        ],
+        "renderer": [
+          "react"
+        ],
+        "service": {
+          "implements": [
+            "router",
+            "html",
+            "app",
+            "server",
+            "bundler",
+            "vite",
+            "renderer",
+            "react"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 887
+      }
+    },
+    {
+      "name": "@cormijs/cache",
+      "version": "0.1.0-rc.3",
+      "description": "The cache of a Cormi app (ctx.cache): key-value tables with expiry, in memory; Redis and the database with @cormijs/cache-redis and @cormijs/cache-database",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "cache",
+        "bundler:*",
+        "renderer:*",
+        "impl:cache"
+      ],
+      "date": "2026-11-04T13:44:17.556Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/cache",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/cache#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The cache of a Cormi app (ctx.cache): key-value tables with expiry, in memory; Redis and the database with @cormijs/cache-redis and @cormijs/cache-database",
+        "source": "declared",
+        "service": {
+          "implements": [
+            "cache"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 403
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-session",
+      "version": "0.1.0-rc.3",
+      "description": "Cookie sessions for Cormi apps: state.session, stored in ctx.cache",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "session",
+        "cookie",
+        "bundler:*",
+        "renderer:*",
+        "required:cache",
+        "required:middleware",
+        "impl:session"
+      ],
+      "date": "2026-11-04T13:45:46.807Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-session",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-session#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Cookie sessions for Cormi apps: state.session, stored in ctx.cache",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "service": {
+          "required": [
+            "cache",
+            "middleware"
+          ],
+          "implements": [
+            "session"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 386
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/storage",
+      "version": "0.1.0-rc.3",
+      "description": "The file storage of a Cormi app (ctx.storage): files by key, on the local disk; S3 with @cormijs/storage-s3",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "storage",
+        "files",
+        "upload",
+        "bundler:*",
+        "renderer:*",
+        "impl:storage"
+      ],
+      "date": "2026-11-04T13:45:44.888Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/storage",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/storage#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The file storage of a Cormi app (ctx.storage): files by key, on the local disk; S3 with @cormijs/storage-s3",
+        "source": "declared",
+        "service": {
+          "implements": [
+            "storage"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 386
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/cache-redis",
+      "version": "0.1.0-rc.3",
+      "description": "The cache of a Cormi app (ctx.cache) in Redis",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "cache",
+        "redis",
+        "bundler:*",
+        "renderer:*",
+        "impl:cache"
+      ],
+      "date": "2026-11-04T13:44:58.979Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/cache-redis",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/cache-redis#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The cache of a Cormi app (ctx.cache) in Redis",
+        "source": "declared",
+        "service": {
+          "implements": [
+            "cache"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 382
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-cors",
+      "version": "0.1.0-rc.3",
+      "description": "CORS for the API routes of Cormi apps",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "cors",
+        "bundler:*",
+        "renderer:*",
+        "required:middleware"
+      ],
+      "date": "2026-11-04T13:47:47.639Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-cors",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-cors#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "CORS for the API routes of Cormi apps",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "service": {
+          "required": [
+            "middleware"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 381
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/cache-database",
+      "version": "0.1.0-rc.3",
+      "description": "The cache of a Cormi app (ctx.cache) in its database, with @cormijs/database",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "cache",
+        "database",
+        "bundler:*",
+        "renderer:*",
+        "required:database",
+        "impl:cache"
+      ],
+      "date": "2026-11-04T13:44:52.972Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/cache-database",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/cache-database#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The cache of a Cormi app (ctx.cache) in its database, with @cormijs/database",
+        "source": "declared",
+        "service": {
+          "required": [
+            "database"
+          ],
+          "implements": [
+            "cache"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 380
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/storage-s3",
+      "version": "0.1.0-rc.3",
+      "description": "The file storage of a Cormi app (ctx.storage) in S3 or a compatible service: AWS, Cloudflare R2, MinIO, Aliyun OSS…",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "storage",
+        "files",
+        "s3",
+        "r2",
+        "minio",
+        "bundler:*",
+        "renderer:*",
+        "impl:storage"
+      ],
+      "date": "2026-11-04T13:46:19.856Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/storage-s3",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/storage-s3#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The file storage of a Cormi app (ctx.storage) in S3 or a compatible service: AWS, Cloudflare R2, MinIO, Aliyun OSS…",
+        "source": "declared",
+        "service": {
+          "implements": [
+            "storage"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 372
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/database",
+      "version": "0.1.0-rc.3",
+      "description": "The database of a Cormi app: minato's ctx.model and ctx.database, with any minato driver",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "database",
+        "minato",
+        "orm",
+        "bundler:*",
+        "renderer:*",
+        "impl:model",
+        "impl:database"
+      ],
+      "date": "2026-11-04T13:44:24.206Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/database",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/packages/database#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "The database of a Cormi app: minato's ctx.model and ctx.database, with any minato driver",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "service": {
+          "implements": [
+            "model",
+            "database"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 365
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-auth",
+      "version": "0.1.0-rc.3",
+      "description": "Signed-in users for Cormi apps: ctx.auth.login(), state.user, routes that require a user, password hashing",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "auth",
+        "login",
+        "password",
+        "bundler:*",
+        "renderer:*",
+        "required:session",
+        "required:middleware",
+        "impl:auth"
+      ],
+      "date": "2026-11-04T13:45:50.606Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-auth",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-auth#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Signed-in users for Cormi apps: ctx.auth.login(), state.user, routes that require a user, password hashing",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "service": {
+          "required": [
+            "session",
+            "middleware"
+          ],
+          "implements": [
+            "auth"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 363
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-rate-limit",
+      "version": "0.1.0-rc.3",
+      "description": "Rate limits for the requests of Cormi apps, counted in ctx.cache",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "rate-limit",
+        "bundler:*",
+        "renderer:*",
+        "required:cache",
+        "required:middleware"
+      ],
+      "date": "2026-11-04T13:48:11.480Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-rate-limit",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-rate-limit#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Rate limits for the requests of Cormi apps, counted in ctx.cache",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "service": {
+          "required": [
+            "cache",
+            "middleware"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 361
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@cormijs/plugin-security",
+      "version": "0.1.0-rc.3",
+      "description": "Security headers for the responses of Cormi apps",
+      "keywords": [
+        "cormi",
+        "cormi-plugin",
+        "cordis",
+        "security",
+        "headers",
+        "helmet",
+        "bundler:*",
+        "renderer:*",
+        "required:middleware"
+      ],
+      "date": "2026-11-04T13:48:23.419Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@cormijs/plugin-security",
+        "homepage": "https://github.com/cormijs/cormi/tree/main/plugins/plugin-security#readme",
+        "repository": "git+https://github.com/cormijs/cormi.git",
+        "bugs": "https://github.com/cormijs/cormi/issues"
+      },
+      "manifest": {
+        "description": "Security headers for the responses of Cormi apps",
+        "cormi": "0.1.0-rc.3",
+        "source": "declared",
+        "service": {
+          "required": [
+            "middleware"
+          ]
+        }
+      },
+      "official": true,
+      "downloads": {
+        "lastMonth": 351
+      },
+      "verified": {
+        "time": "2026-11-14T04:51:00.695Z",
+        "compat": {},
+        "matches": true
+      }
+    },
+    {
+      "name": "@minatojs/driver-sqlite",
+      "version": "5.0.3",
+      "description": "SQLite Driver for Minato",
+      "keywords": [
+        "orm",
+        "database",
+        "driver",
+        "sqlite"
+      ],
+      "date": "2026-04-18T06:35:43.829Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@minatojs/driver-sqlite",
+        "homepage": "https://github.com/cordiverse/minato/packages/sqlite#readme"
+      },
+      "manifest": {
+        "description": "SQLite Driver for Minato",
+        "category": "database",
+        "source": "declared",
+        "service": {
+          "required": [
+            "model"
+          ],
+          "implements": [
+            "database"
+          ]
+        }
+      },
+      "official": false,
+      "external": true,
+      "downloads": {
+        "lastMonth": 3215
+      }
+    },
+    {
+      "name": "@minatojs/driver-mysql",
+      "version": "4.0.1",
+      "description": "MySQL Driver for Minato",
+      "keywords": [
+        "orm",
+        "database",
+        "driver",
+        "mysql"
+      ],
+      "date": "2026-04-18T06:35:47.163Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@minatojs/driver-mysql",
+        "homepage": "https://github.com/cordiverse/minato/packages/mysql#readme"
+      },
+      "manifest": {
+        "description": "MySQL Driver for Minato",
+        "category": "database",
+        "source": "declared",
+        "service": {
+          "required": [
+            "model"
+          ],
+          "implements": [
+            "database"
+          ]
+        }
+      },
+      "official": false,
+      "external": true,
+      "downloads": {
+        "lastMonth": 1039
+      }
+    },
+    {
+      "name": "@minatojs/driver-postgres",
+      "version": "3.0.1",
+      "description": "PostgreSQL Driver for Minato",
+      "keywords": [
+        "orm",
+        "database",
+        "driver",
+        "postgres",
+        "postgresql"
+      ],
+      "date": "2026-04-18T06:35:37.446Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@minatojs/driver-postgres",
+        "homepage": "https://github.com/cordiverse/minato/packages/postgres#readme"
+      },
+      "manifest": {
+        "description": "PostgreSQL Driver for Minato",
+        "category": "database",
+        "source": "declared",
+        "service": {
+          "required": [
+            "model"
+          ],
+          "implements": [
+            "database"
+          ]
+        }
+      },
+      "official": false,
+      "external": true,
+      "downloads": {
+        "lastMonth": 594
+      }
+    },
+    {
+      "name": "@minatojs/driver-memory",
+      "version": "4.0.0",
+      "description": "In-memory Driver for Minato",
+      "keywords": [
+        "orm",
+        "database",
+        "driver",
+        "memory"
+      ],
+      "date": "2026-04-13T06:45:08.383Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@minatojs/driver-memory",
+        "homepage": "https://github.com/cordiverse/minato/packages/memory#readme"
+      },
+      "manifest": {
+        "description": "In-memory Driver for Minato",
+        "category": "database",
+        "source": "declared",
+        "service": {
+          "required": [
+            "model"
+          ],
+          "implements": [
+            "database"
+          ]
+        }
+      },
+      "official": false,
+      "external": true
+    },
+    {
+      "name": "@minatojs/driver-mongo",
+      "version": "4.0.1",
+      "description": "MongoDB Driver for Minato",
+      "keywords": [
+        "orm",
+        "database",
+        "driver",
+        "mongo",
+        "mongodb"
+      ],
+      "date": "2026-04-18T06:35:40.672Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/@minatojs/driver-mongo",
+        "homepage": "https://github.com/cordiverse/minato/packages/mongo#readme"
+      },
+      "manifest": {
+        "description": "MongoDB Driver for Minato",
+        "category": "database",
+        "source": "declared",
+        "service": {
+          "required": [
+            "model"
+          ],
+          "implements": [
+            "database"
+          ]
+        }
+      },
+      "official": false,
+      "external": true
+    }
+  ]
+}
